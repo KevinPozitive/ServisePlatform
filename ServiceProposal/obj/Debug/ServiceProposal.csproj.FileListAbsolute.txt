@@ -83,3 +83,9 @@ D:\Work\WebService\ServiceProposal\obj\Debug\ServiceProposal.csprojAssemblyRefer
 D:\Work\WebService\ServiceProposal\obj\Debug\ServiceProposal.csproj.CopyComplete
 D:\Work\WebService\ServiceProposal\obj\Debug\ServiceProposal.dll
 D:\Work\WebService\ServiceProposal\obj\Debug\ServiceProposal.pdb
+D:\Work\WebService\ServiceProposal\bin\EntityFramework.dll
+D:\Work\WebService\ServiceProposal\bin\EntityFramework.SqlServer.dll
+D:\Work\WebService\ServiceProposal\bin\EntityFramework.xml
+D:\Work\WebService\ServiceProposal\bin\EntityFramework.SqlServer.xml
+D:\Work\WebService\ServiceProposal\bin\System.Web.Providers.dll
+D:\Work\WebService\ServiceProposal\bin\System.Web.Providers.xml
