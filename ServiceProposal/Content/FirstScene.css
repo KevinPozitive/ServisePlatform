@@ -1,4 +1,28 @@
 ﻿
+/*Scroll menu for categories*/
+
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+    div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+    }
+
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
+
+
+/*Table for services*/
+
+
 .rectangle {
     counter-reset: li;
     list-style: none;
@@ -52,6 +76,9 @@
             border-left-color: #9097A2;
         }
 
+
+
+/*Modal button*/
 a.button1 {
     display: inline-block;
     font-family: arial,sans-serif;
@@ -119,3 +146,35 @@ a.button1 {
         text-decoration: none;
         cursor: pointer;
     }
+
+
+    .tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Изменить цвет фона кнопок при наведении */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Установить стили по умолчанию для содержимого вкладки */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Стиль каждой вкладки индивидуально */
+#London {background-color:red;}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
