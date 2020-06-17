@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category</h2>
+
+
+
+
+<div class="row">
+    <link rel="stylesheet" href="../Content/FirstScene.css">
+    <script src="../scripts/FirstScene.js"></script>
+
+
+    <div class="scrollmenu">
+        @foreach (var b in ViewBag.Categories)
+        {
+            <a href="@Request.Url.GetLeftPart(UriPartial.Path)?categoryid=@b.Id">@b.Name</a>
+        }
+    </div>
+    @if (Request.Params["categoryid"] != null)
+    {
+        <ol class="rectangle">
+           @foreach (var service in ViewBag.Services)
+            {
+                if (Int32.Parse(Request.Params["categoryid"]) == service.CategoryId)
+                {
+                    <li><a href="#">@service.Name</a></li>
+                }
+            }
+        </ol>
+    }
+
+
+</div>
+
+
+
+
