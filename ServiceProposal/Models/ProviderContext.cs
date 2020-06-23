@@ -9,7 +9,7 @@ namespace ServiceProposal.Models
     public class ProviderContext : DbContext
     {
         public ProviderContext()
-           : base("ProviderContext")
+           : base("MyDB")
         { }
         public DbSet<Provider> Providers { get; set; }
     }

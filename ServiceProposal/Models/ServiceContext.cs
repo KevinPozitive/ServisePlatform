@@ -9,7 +9,7 @@ namespace ServiceProposal.Models
     public class ServiceContext: DbContext
     {
         public ServiceContext()
-     : base("ServiceContext")
+     : base("MyDB")
         {
         }
         public DbSet<Service> Services { get; set; }
