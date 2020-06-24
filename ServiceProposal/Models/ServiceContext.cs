@@ -13,6 +13,13 @@ namespace ServiceProposal.Models
         {
         }
         public DbSet<Service> Services { get; set; }
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Provider>().HasMany(c => c.Services)
+                .WithMany(s => s.Providers)
+                .Map(t => t.MapLeftKey("ServiceId")
+                .MapRightKey("ProviderId")
+                .ToTable("ProvidersAndServices"));
+        }
     }
 }

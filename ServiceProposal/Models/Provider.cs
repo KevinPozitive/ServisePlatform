@@ -15,5 +15,11 @@ namespace ServiceProposal.Models
         public string TelNumber { get; set; }
 
         public string Email { get; set; }
+
+        public virtual ICollection<Service> Services { get; set; }
+        public Provider()
+        {
+            Services = new List<Service>();
+        }
     }
 }
