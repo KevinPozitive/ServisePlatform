@@ -25,26 +25,20 @@
             modal.style.display = "none";
         }
     }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+}
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+    document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
 
-debugger;
-function openCity(cityName, elmnt, color) {
-    // Hide all elements with class="tabcontent" by default */
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Удалить цвет фона всех вкладок/кнопок
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-
-    // Показать конкретное содержание вкладки
-    document.getElementById(cityName).style.display = "block";
-
-    // Добавьте определенный цвет к кнопке, используемой для открытия содержимого вкладки
-    elmnt.style.backgroundColor = color;
-}

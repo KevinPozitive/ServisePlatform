@@ -13,7 +13,7 @@
         // Если требуется выбрать другую базу данных или поставщик базы данных, измените строку подключения "Model1" 
         // в файле конфигурации приложения.
         public CategoryContext()
-            : base("CategoryContext")
+            : base("MyDB")
         {
         }
         public DbSet<Category> Categories { get; set; }

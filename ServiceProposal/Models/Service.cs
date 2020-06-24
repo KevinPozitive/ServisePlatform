@@ -11,5 +11,12 @@ namespace ServiceProposal.Models
         public string Name { get; set; }
         public int CategoryId{ get; set; }
 
+
+        public virtual ICollection<Provider> Providers { get; set; }
+        public Service()
+        {
+            Providers = new List<Provider>();
+        }
+
     }
 }

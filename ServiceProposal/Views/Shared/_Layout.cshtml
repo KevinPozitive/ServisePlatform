@@ -24,6 +24,22 @@
                     <li>@Html.ActionLink("Категории", "Category", "Category")</li>
                     <li>@Html.ActionLink("Информация", "About", "Home")</li>
                     <li>@Html.ActionLink("Связаться", "Contact", "Home")</li>
+                    @if (User.Identity.IsAuthenticated == true)
+                    {
+                        <li>@Html.ActionLink("Личный кабинет", "Parlor", "PersonalArea")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Войти", "Login", "Account")</li>
+                    }
+                    @if (User.Identity.IsAuthenticated == true)
+                    {
+                        <li>@Html.ActionLink("Выход", "Logoff", "Account")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Зарегистрироваться", "Register", "Account")</li>
+                    }
                 </ul>
             </div>
         </div>
