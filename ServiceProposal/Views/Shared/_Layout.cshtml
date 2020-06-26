@@ -23,7 +23,6 @@
                     <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
                     <li>@Html.ActionLink("Категории", "Category", "Category")</li>
                     <li>@Html.ActionLink("Информация", "About", "Home")</li>
-                    <li>@Html.ActionLink("Связаться", "Contact", "Home")</li>
                     @if (User.Identity.IsAuthenticated == true)
                     {
                         <li>@Html.ActionLink("Личный кабинет", "Parlor", "PersonalArea")</li>
@@ -49,7 +48,6 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Author: Vlad Marshalov</p><br>
-            <a href="marshal.vlad.99@gmail.com">marshal.vlad.99@gmail.com</a>
         </footer>
     </div>
 

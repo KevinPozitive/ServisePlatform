@@ -4,128 +4,37 @@
 
 <div class="jumbotron">
     <h1>WebServicePlatform</h1>
-    <p class="lead">WebServicePlatform this is my job</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p class="lead">Исходный код проекта:</p>
+    <p><a href="https://github.com/KevinPozitive/ServisePlatform" class="btn btn-primary btn-lg">GitHub &raquo;</a></p>
 
     <link rel="stylesheet" href="../Content/FirstScene.css">
     <script src="../scripts/FirstScene.js"></script>
 
-    <button id="myBtn">Войти</button>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        @*<div class="modal-content">
-            <span class="close">&times;</span>
-
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'Authorization')" id="defaultOpen">Authorization</button>
-                <button class="tablinks" onclick="openTab(event, 'Registration')">Registration</button>
-            </div>
-
-            <div id="Authorization" class="tabcontent">
-                <h3>Authorization</h3>
-                @using (Html.BeginForm())
-                {
-                    @Html.AntiForgeryToken()
-
-                    <div class="form-horizontal">
-                        <h4>LoginModel</h4>
-                        <hr />
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Войти" class="btn btn-default" />
-                            </div>
-                        </div>
-                    </div>
-                }
-
-                <div>
-                    @Html.ActionLink("Back to List", "Index")
-                </div>
-
-            </div>
-
-            <div id="Registration" class="tabcontent">
-                @using (Html.BeginForm())
-                {
-                    @Html.AntiForgeryToken()
-
-                    <div class="form-horizontal">
-                        <h4>RegisterModel</h4>
-                        <hr />
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.LoginModel, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Зарегистрироваться" class="btn btn-default" />
-                            </div>
-                        </div>
-                    </div>
-                }
-
-                <div>
-                    @Html.ActionLink("Back to List", "Index")
-                </div>
-            </div>
-        </div>*@
-
-    </div>
 </div>
 
 
 
-
+<p class="lead">Используемые технологии:</p>
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>ASP.NET MVC5</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Платформа ASP.NET MVC представляет собой фреймворк для создания сайтов и веб-приложений с помощью реализации паттерна MVC.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="https://metanit.com/sharp/mvc5/">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>EntityFramework</h2>
+        <p>
+            Entity Framework Core (EF Core) представляет собой объектно-ориентированную, легковесную и расширяемую технологию от компании Microsoft для доступа к данным.
+        </p>
+        <p><a class="btn btn-default" href="https://metanit.com/sharp/entityframeworkcore/">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>MS SQL Server</h2>
+        <p>
+            SQL Server является одной из наиболее популярных систем управления базами данных (СУБД) в мире. Данная СУБД подходит для самых различных проектов: от небольших приложений до больших высоконагруженных проектов.
+        </p>
+        <p><a class="btn btn-default" href="https://metanit.com/sql/sqlserver/1.1.php">Learn more &raquo;</a></p>
     </div>
 </div>
