@@ -17,11 +17,14 @@ namespace ServiceProposal.Controllers
         {
             var categories = dbCategory.Categories;
             ViewBag.Categories = categories;
-
+            
             var services = dbService.Services;
             ViewBag.Services = services;
+            
+            
 
             return View();
         }
+
     }
 }

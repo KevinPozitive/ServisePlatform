@@ -4,13 +4,16 @@
 
 <h2>Category</h2>
 
+@model ServiceProposal.Models.Provider
+@using ServiceProposal.Models
 
 
 
 <div class="row">
     <link rel="stylesheet" href="../Content/FirstScene.css">
     <script src="../scripts/FirstScene.js"></script>
-
+    <link rel="stylesheet" href="../Content/Accordion.css">
+    <script src="../scripts/Accordion.js"></script>
 
     <div class="scrollmenu">
         @foreach (var b in ViewBag.Categories)
@@ -20,18 +23,40 @@
     </div>
     @if (Request.Params["categoryid"] != null)
     {
-        <ol class="rectangle">
-           @foreach (var service in ViewBag.Services)
+        <div class="accordion">
+            @foreach (var service in ViewBag.Services)
             {
                 if (Int32.Parse(Request.Params["categoryid"]) == service.CategoryId)
                 {
-                    <li><a href="#">@service.Name</a></li>
+
+                    <div class="tab">
+                        <input type="checkbox" id="tab+@service.Id" name="tab-group">
+                        <label for="tab+@service.Id" class="tab-title">@service.Name</label>
+                        <section class="tab-content">
+                            <ul>
+                                @{
+                                    Service service2 = new Service();
+                                    ServiceContext dbSevice = new ServiceContext();
+                                    service2 = dbSevice.Services.Find(service.Id);
+                                }
+                                @foreach (Provider provider1 in service2.Providers)
+                                {
+                                <li>
+                                    @provider1.FirstName
+                                    @provider1.SecondName
+                                    @provider1.TelNumber
+                                    @provider1.Email
+                                </li>
+                                }
+                            </ul>
+                        </section>
+                    </div>
+
+
                 }
             }
-        </ol>
+        </div>
     }
-
-
 </div>
 
 
