@@ -12,7 +12,7 @@ namespace ServiceProposal.Models
            : base("MyDB")
         { }
         public DbSet<Provider> Providers { get; set; }
-
+        public DbSet<Service> Services { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Service>().HasMany(c => c.Providers)

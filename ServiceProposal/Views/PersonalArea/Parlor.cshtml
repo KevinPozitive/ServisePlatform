@@ -8,23 +8,24 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Личная Информация</h2>
+        <h2>Личная <p>Информация</p></h2>
         <hr><p>Имя: @Model.FirstName</p>
         <hr><p>Фамилия: @Model.SecondName</p>
         <hr><p>Моб. Телефон: @Model.TelNumber</p>
         <hr><p>Почта: @Model.Email</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Предоставляемые услуги: @Model.Services.Count</h2>
+        <h2>Предоставляемые <p>услуги: @Model.Services.Count</p></h2>
+       
         @foreach (Service a in Model.Services)
         {
             <hr><p>@a.Name</p>
         }
 
+
     </div>
     <div class="col-md-4">
-
+        <p> @Html.ActionLink("Изменить", "Edit", new { id = Model.Id })</p>
     </div>
 </div>
 
