@@ -35,8 +35,9 @@
                 <p>
                     <div class="editor-label"><b>Услуги</b></div>
                 <p>
+                     
                     @foreach (Service c in ViewBag.Services)
-                    {
+                    {   
                         <input type="checkbox" name="selectedServices" value="@c.Id"
                                @(Model.Services.Contains(c) ? "checked=\"checked\"" : "") /> @c.Name <br />
                      }

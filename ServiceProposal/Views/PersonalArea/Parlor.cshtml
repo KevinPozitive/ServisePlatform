@@ -8,22 +8,21 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Личная <p>Информация</p></h2>
-        <hr><p>Имя: @Model.FirstName</p>
-        <hr><p>Фамилия: @Model.SecondName</p>
-        <hr><p>Моб. Телефон: @Model.TelNumber</p>
-        <hr><p>Почта: @Model.Email</p>
+        <h3>Личная <p>Информация</p></h3>
+        <hr><p><strong>Имя:</strong> @Model.FirstName</p>
+        <hr><p><strong>Фамилия:</strong> @Model.SecondName</p>
+        <hr><p><strong>Моб. Телефон:</strong> @Model.TelNumber</p>
+        <hr><p><strong>Почта:</strong> @Model.Email</p>
     </div>
     <div class="col-md-4">
-        <h2>Предоставляемые <p>услуги: @Model.Services.Count</p></h2>
+        <h3>Предоставляемые <p>услуги: @Model.Services.Count</p></h3>
        
         @foreach (Service a in Model.Services)
         {
             <hr><p>@a.Name</p>
         }
-
-
     </div>
+
     <div class="col-md-4">
         <p> @Html.ActionLink("Изменить", "Edit", new { id = Model.Id })</p>
     </div>
