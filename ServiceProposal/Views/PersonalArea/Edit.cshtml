@@ -1,0 +1,53 @@
+﻿@model ServiceProposal.Models.Provider
+@using ServiceProposal.Models
+
+@{
+    ViewBag.Title = "Редактирование";
+}
+
+@using (Html.BeginForm())
+{
+
+    <fieldset>
+        @Html.HiddenFor(model => model.Id)
+        <div class="row">
+            <div class="col-md-4">
+                <p>
+                    <div class="editor-label"><b>Имя</b></div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.FirstName)
+                    </div>
+                </p>
+                <p>
+                    <div class="editor-label"><b>Фамилия</b></div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SecondName)
+                    </div>
+                </p>
+                <p>
+                    <div class="editor-label"><b>Моб. Телефон</b></div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.TelNumber)
+                    </div>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <div class="editor-label"><b>Услуги</b></div>
+                <p>
+                    @foreach (Service c in ViewBag.Services)
+                    {
+                        <input type="checkbox" name="selectedServices" value="@c.Id"
+                               @(Model.Services.Contains(c) ? "checked=\"checked\"" : "") /> @c.Name <br />
+                     }
+                </p>
+
+                <p>
+                    <input type="submit" value="Сохранить" />
+                </p>
+                
+            </div>
+        </div>
+    </fieldset>
+}
+
