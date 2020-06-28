@@ -2,63 +2,65 @@
     ViewBag.Title = "Category";
 }
 
-<h2>Категории</h2>
+
 
 @model ServiceProposal.Models.Provider
 @using ServiceProposal.Models
+<link rel="stylesheet" href="../Content/TextBord.css">
 
 
+<div class="content">
+    <h2>Категории</h2>
+    <div class="row">
+        <link rel="stylesheet" href="../Content/FirstScene.css">
+        <script src="../scripts/FirstScene.js"></script>
+        <link rel="stylesheet" href="../Content/Accordion.css">
+        <script src="../scripts/Accordion.js"></script>
 
-<div class="row">
-    <link rel="stylesheet" href="../Content/FirstScene.css">
-    <script src="../scripts/FirstScene.js"></script>
-    <link rel="stylesheet" href="../Content/Accordion.css">
-    <script src="../scripts/Accordion.js"></script>
-
-    <div class="scrollmenu">
-        @foreach (var b in ViewBag.Categories)
-        {
-            <a href="@Request.Url.GetLeftPart(UriPartial.Path)?categoryid=@b.Id">@b.Name</a>
-        }
-    </div>
-    @if (Request.Params["categoryid"] != null)
-    {
-        <div class="accordion">
-            @foreach (var service in ViewBag.Services)
+        <div class="scrollmenu">
+            @foreach (var b in ViewBag.Categories)
             {
-                if (Int32.Parse(Request.Params["categoryid"]) == service.CategoryId)
-                {
-
-                    <div class="tab">
-                        <input type="checkbox" id="tab+@service.Id" name="tab-group">
-                        <label for="tab+@service.Id" class="tab-title">@service.Name</label>
-                        <section class="tab-content">
-                            <ul>
-                                @{
-                                    Service service2 = new Service();
-                                    ServiceContext dbSevice = new ServiceContext();
-                                    service2 = dbSevice.Services.Find(service.Id);
-                                }
-                                @foreach (Provider provider1 in service2.Providers)
-                                {
-                                <li>
-                                    @provider1.FirstName
-                                    @provider1.SecondName
-                                    @provider1.TelNumber
-                                    @provider1.Email
-                                </li>
-                                }
-                            </ul>
-                        </section>
-                    </div>
-
-
-                }
+                <a href="@Request.Url.GetLeftPart(UriPartial.Path)?categoryid=@b.Id">@b.Name</a>
             }
         </div>
-    }
-</div>
+        @if (Request.Params["categoryid"] != null)
+        {
+            <div class="accordion">
+                @foreach (var service in ViewBag.Services)
+                {
+                    if (Int32.Parse(Request.Params["categoryid"]) == service.CategoryId)
+                    {
 
+                        <div class="tab">
+                            <input type="checkbox" id="tab+@service.Id" name="tab-group">
+                            <label for="tab+@service.Id" class="tab-title">@service.Name</label>
+                            <section class="tab-content">
+                                <ul>
+                                    @{
+                                        Service service2 = new Service();
+                                        ServiceContext dbSevice = new ServiceContext();
+                                        service2 = dbSevice.Services.Find(service.Id);
+                                    }
+                                    @foreach (Provider provider1 in service2.Providers)
+                                    {
+                                        <li>
+                                            @provider1.FirstName
+                                            @provider1.SecondName
+                                            @provider1.TelNumber
+                                            @provider1.Email
+                                        </li>
+                                    }
+                                </ul>
+                            </section>
+                        </div>
+
+
+                    }
+                }
+            </div>
+        }
+    </div>
+</div>
 
 
 
