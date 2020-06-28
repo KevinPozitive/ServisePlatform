@@ -1,0 +1,26 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+    position: relative;
+    grid-column-end: auto;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
